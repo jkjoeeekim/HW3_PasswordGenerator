@@ -1,9 +1,11 @@
+// Possible elements in password //
 var lowBox = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
 var upBox = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
 var numBox = ["1","2","3","4","5","6","7","8","9","0"]
 var spcBox = ["!","@","#","$","%","^","&","*","?","~"]
 var allChars = [lowBox, upBox, numBox, spcBox]
 
+// Function to pick a random element within the array //
 function getRandomLow() {
     return lowBox[Math.floor(Math.random() * lowBox.length)]
 }
@@ -17,6 +19,7 @@ function getRandomSpc() {
     return spcBox[Math.floor(Math.random() * spcBox.length)]
 }
 
+// Calling on DOM element //
 var passwordEl = document.getElementById("password");
 var lowerEl = document.getElementById("lowBox");
 var upperEl = document.getElementById("upBox");
@@ -25,18 +28,15 @@ var specialEl = document.getElementById("spcBox");
 var charactersEl = document.getElementById("characters");
 var createEl = document.getElementById("createBtn");
 
-
-
-
-const randomGen = {
+// Possible list of random elements to be chosen from random arrays //
+var randomGen = {
     lower: getRandomLow,
     upper: getRandomUp,
     number: getRandomNum,
     special: getRandomSpc,
 };
 
-// Add event listener
-
+// Event listener to respond to generate button //
 createEl.addEventListener("click", () => {
     var incLower = lowerEl.checked;
     var incUpper = upperEl.checked;
@@ -53,7 +53,7 @@ createEl.addEventListener("click", () => {
     );
 });
 
-// Generate password
+// Generating the password //
 function generatePassword(lower, upper, number, special, length) {
     let generatedPassword = "";
 
@@ -62,6 +62,7 @@ function generatePassword(lower, upper, number, special, length) {
     var typesArr = [{ lower }, { upper }, { number }, { special }].filter(item => Object.values(item)[0]);
 
     if (typesCount === 0) {
+        alert("Please highlight at least 1 box")
         return "";
     }
 
@@ -82,31 +83,12 @@ function generatePassword(lower, upper, number, special, length) {
         });
     }
 
-    const finalPassword = generatedPassword.slice(0, length);
+    var finalPassword = generatedPassword.slice(0, length);
 
     return finalPassword; 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-console.log(getRandomNum());
-
-
-
-
-
-
+// Function to only allow numbers in input characters box //
 function isNumber(evt) {
     evt = (evt) ? evt : window.event;
     var charCode = (evt.which) ? evt.which : evt.keyCode;

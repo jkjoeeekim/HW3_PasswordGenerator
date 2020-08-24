@@ -9,7 +9,7 @@ h1 {
     border-width: 3px;
     border-style: solid;
     border-color: rgb(255, 0, 0);
-    margin: 100px;
+    margin: 50px;
     padding: 15px;
     background-color: rgb(104, 100, 100);
 }
@@ -22,7 +22,6 @@ section {
     border-radius: 5px;
     padding: 75px;
     margin: 50px;
-    margin-right: 1000px;
 }
 
 h2 {
@@ -33,7 +32,7 @@ label {
     display: block;
     position: relative;
     padding-left: 35px;
-    margin-bottom: 12px;
+    margin-bottom: 20px;
     cursor: pointer;
     font-size: 17px;
     -webkit-user-select: none;

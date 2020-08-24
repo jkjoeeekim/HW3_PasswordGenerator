@@ -71,7 +71,7 @@ function generatePassword(lower, upper, number, special, length) {
         return "";
     }
 
-    if (length > 24) {
+    if (length > 16) {
         alert("Password is too long");
         return "";
     }

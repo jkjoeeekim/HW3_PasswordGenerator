@@ -20,8 +20,8 @@ section {
     border-width: 3px;
     border-color: rgb(255, 0, 0);
     border-radius: 5px;
-    padding: 75px;
-    margin: 50px;
+    padding: 50px;
+    margin: 15px;
 }
 
 h2 {
@@ -33,12 +33,7 @@ label {
     position: relative;
     padding-left: 35px;
     margin-bottom: 20px;
-    cursor: pointer;
     font-size: 17px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
 }
 
 
@@ -102,12 +97,16 @@ label input:checked ~ .checkmark {
 }
 
 .password {
-    border-width: 3px;
+    color: black;
+    background-color: #FFFF00;
+    border: 10px;
     border-color: rgb(255, 0, 0);
     border-radius: 5px;
-    width: 500px;
-    height: 25px;
-    margin: 10px;
+    width: 250px;
+    height: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
 }
 
 #createBtn {

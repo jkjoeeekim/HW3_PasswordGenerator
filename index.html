@@ -15,29 +15,31 @@
 
             <h3><i>Highlight to include in password</i></h3>
 
-            <label class="lowBox">Lower-case letters
-                <input type="checkbox" checked="checked">
+            <label for="lowBox">Lower-case letters
+                <input id="lowBox" type="checkbox" checked="checked">
                 <span class="checkmark"></span>
             </label>
 
-            <label class="upBox">Upper-case letters
-                <input type="checkbox" checked="checked">
+            <label for="upBox">Upper-case letters
+                <input id="upBox" type="checkbox" checked="checked">
                 <span class="checkmark"></span>
             </label>
 
-            <label class="numBox">Numbers
-                <input type="checkbox" checked="checked">
+            <label for="numBox">Numbers
+                <input id="numBox" type="checkbox" checked="checked">
                 <span class="checkmark"></span>
             </label>
 
-            <label class="spcBox">Special characters
-                <input type="checkbox" checked="checked">
+            <label for="spcBox">Special characters
+                <input id="spcBox" type="checkbox" checked="checked">
                 <span class="checkmark"></span>
             </label>
 
-            <input class="characters" maxlength="2" onkeypress="return isNumber(event)">How many characters in your password? (Choose between 8 ~ 24)</input>
-
-            <input class="password" type="password" READONLY/>
+            <input type="number" id="characters" min="8" max="24" maxlength="2" onkeypress="return isNumber(event)">How many characters in your password? (Choose between 8 ~ 24)</input>
+            
+            <div class="password" type="password">
+                <span id="password"></span>
+            </div>
 
             <button id="createBtn">GENERATE</button>
         </section>

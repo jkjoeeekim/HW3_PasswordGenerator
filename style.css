@@ -1,0 +1,132 @@
+html {
+    color: whitesmoke;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(48, 48, 48);
+}
+
+h1 {
+    text-align: center;
+    border-width: 3px;
+    border-style: solid;
+    border-color: rgb(255, 0, 0);
+    margin: 100px;
+    padding: 15px;
+    background-color: rgb(104, 100, 100);
+}
+
+section {
+    background-color: rgb(104, 100, 100);
+    border-style: inset;
+    border-width: 3px;
+    border-color: rgb(255, 0, 0);
+    border-radius: 5px;
+    padding: 75px;
+    margin: 50px;
+    margin-right: 1000px;
+}
+
+h2 {
+    text-align: center;
+}
+
+label {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 17px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+label input{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+
+label:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+label input:checked ~ .checkmark:after {
+    display: block;
+}
+
+label input .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: rgb(255, 255, 255);
+    border-width: 0px 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+label input:checked ~ .checkmark {
+    background-color: rgb(255, 0, 0)
+}
+
+.characters {
+    border-width: 3px;
+    border-color: rgb(255, 0, 0);
+    border-radius: 5px;
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+.password {
+    border-width: 3px;
+    border-color: rgb(255, 0, 0);
+    border-radius: 5px;
+    width: 500px;
+    height: 25px;
+    margin: 10px;
+}
+
+#createBtn {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    transition-duration: .5s; 
+    color: rgb(0, 0, 109)
+}
+
+#createBtn:hover {
+    background-color: rgb(104, 100, 100);
+    border-style: inset;
+    border-color: rgb(255, 0, 0);
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    color: whitesmoke;
+}
+

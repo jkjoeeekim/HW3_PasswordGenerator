@@ -65,6 +65,16 @@ function generatePassword(lower, upper, number, special, length) {
         return "";
     }
 
+    if (length < 8) {
+        alert("Password is too short");
+        return "";
+    }
+
+    if (length > 24) {
+        alert("Password is too long");
+        return "";
+    }
+
     for (let i = 0; i < length; i += typesCount) {
         typesArr.forEach(type => {
             var rand = Object.keys(type)[0];
@@ -73,7 +83,6 @@ function generatePassword(lower, upper, number, special, length) {
     }
 
     const finalPassword = generatedPassword.slice(0, length);
-    console.log(generatedPassword.slice(0, length))
 
     return finalPassword; 
 }
